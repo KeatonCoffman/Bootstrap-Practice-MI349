@@ -1,86 +1,110 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="utf-8"> <title>Bootstrap</title> 
-    <link rel="stylesheet" href="skeleton.css">
-        <!-- Optional Bootstrap theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    /* Some custom styles to beautify this example */
-    .demo-content{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
         padding: 15px;
-        font-size: 18px;
-        min-height: 300px;
-        background: #dbdfe5;
-        margin-bottom: 10px;
+      }
+      .row.content {height:auto;} 
     }
-    .demo-content.bg-alt{
-        background: #abb1b8;
-    }
-    </style>
-  </head>
+  </style>
+</head>
+<body>
 
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <p>Navbar p tag</p>
-
-        <!--Row with two equal columns-->
-
-        <div class="row">
-
-            <div class="col-sm-6">
-              <p>columnleft</p>
-            </div>
-
-
-            <div class="col-sm-6">
-              <p>columnright</p>
-            </div>
-
-        </div>
-
-        
-
-        <!--Row with two columns divided in 1:2 ratio-->
-
-        <div class="row">
-
-            <div class="col-sm-4"><!--Column left--></div>
-
-            <div class="col-sm-8"><!--Column right--></div>
-
-        </div>
-
-        
-
-        <!--Row with two columns divided in 1:3 ratio-->
-
-        <div class="row">
-
-            <div class="col-sm-3"><!--Column left--></div>
-
-            <div class="col-sm-9"><!--Column right--></div>
-
-        </div>
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="https://www.tutorialspoint.com/bootstrap/bootstrap_thumbnails.htm">About</a></li>
+        <li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-examples.php">Projects</a></li>
+        <li><a href="https://www.w3schools.com/bootstrap/bootstrap_get_started.asp">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
-
-
-
   
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>
+    <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="thumbnail clearfix">
+        <img src="http://placehold.it/180x200/456" class="pull-left">
+         <div class="caption" class="pull-right">
+            <p>Thumbnail example</p>
+         </div>
+    </div>
+    </div>
+  </div>
+</div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
-    
-
-    <script src="js/jquery-1.11.3.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-  <body>
-
-  </body>
+</body>
 </html>
